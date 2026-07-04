@@ -26,14 +26,9 @@ npm start
 
 You can also use the VS Code debugger configuration named `Run AI Interview Coach`.
 
-## Resume Bullet
-
-Built an AI-powered interview coaching platform that generates personalized technical and HR mock interviews from resume or job description context, evaluates responses across multiple communication and technical dimensions, and produces session-level improvement reports using rule-based NLP with an extensible LLM integration layer.
-
 ## Future Enhancements
 
 - Connect OpenAI or Gemini API for stronger answer evaluation
 - Add login and interview history database
 - Add PDF resume parsing
-- Add webcam-based confidence and posture analysis
 - Export final report as PDF
