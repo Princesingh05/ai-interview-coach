@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrepWise AI Interview Coach</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">P</div>
+          <div>
+            <p class="eyebrow">PrepWise</p>
+            <h1>AI Interview Coach</h1>
+          </div>
+        </div>
+
+        <section class="panel setup-panel">
+          <h2>Session Setup</h2>
+          <label>
+            Target role
+            <select id="role">
+              <option>Software Engineer</option>
+              <option>Backend Developer</option>
+              <option>Frontend Developer</option>
+              <option>Data Analyst</option>
+              <option>Java Developer</option>
+              <option>Full Stack Developer</option>
+            </select>
+          </label>
+
+          <label>
+            Interview type
+            <select id="interviewType">
+              <option value="mixed">Mixed</option>
+              <option value="technical">Technical</option>
+              <option value="hr">HR</option>
+              <option value="project">Project Deep Dive</option>
+            </select>
+          </label>
+
+          <label>
+            Resume or job description
+            <textarea id="context" rows="7" placeholder="Paste your resume summary, project details, or job description here."></textarea>
+          </label>
+
+          <div class="button-row">
+            <button class="primary-button" id="startBtn">Start Interview</button>
+            <button class="icon-button" id="resetBtn" aria-label="Reset session" title="Reset session">↺</button>
+          </div>
+        </section>
+
+        <section class="panel stats-panel">
+          <h2>Progress</h2>
+          <div class="stat-grid">
+            <div>
+              <span id="questionCount">0/0</span>
+              <p>Questions</p>
+            </div>
+            <div>
+              <span id="averageScore">--</span>
+              <p>Average</p>
+            </div>
+            <div>
+              <span id="timer">00:00</span>
+              <p>Time</p>
+            </div>
+          </div>
+        </section>
+      </aside>
+
+      <section class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Mock interview workspace</p>
+            <h2 id="sessionTitle">Prepare smarter for your first role</h2>
+          </div>
+          <button class="secondary-button" id="downloadBtn">Download Report</button>
+        </header>
+
+        <section class="question-panel">
+          <div class="question-meta">
+            <span id="questionTag">Ready</span>
+            <span id="difficultyTag">Fresh Graduate Level</span>
+          </div>
+          <h3 id="questionText">Choose your target role, paste context, and start your mock interview.</h3>
+        </section>
+
+        <section class="answer-grid">
+          <div class="answer-card">
+            <div class="card-header">
+              <h3>Your Answer</h3>
+              <button class="secondary-button compact" id="voiceBtn">Voice</button>
+            </div>
+            <textarea id="answer" rows="12" placeholder="Type your answer here. Try to explain your reasoning, examples, and result clearly."></textarea>
+            <div class="button-row">
+              <button class="primary-button" id="evaluateBtn">Evaluate Answer</button>
+              <button class="secondary-button" id="nextBtn">Next Question</button>
+            </div>
+          </div>
+
+          <div class="feedback-card">
+            <div class="card-header">
+              <h3>Coach Feedback</h3>
+              <span id="scoreBadge">--</span>
+            </div>
+            <div id="feedbackEmpty" class="empty-state">
+              Your coaching feedback will appear here after evaluation.
+            </div>
+            <div id="feedbackContent" class="feedback-content hidden">
+              <div class="score-bars" id="scoreBars"></div>
+              <h4>What worked</h4>
+              <ul id="strengths"></ul>
+              <h4>Improve next</h4>
+              <ul id="improvements"></ul>
+              <h4>Stronger sample answer</h4>
+              <p id="sampleAnswer"></p>
+            </div>
+          </div>
+        </section>
+
+        <section class="report-panel">
+          <div class="card-header">
+            <h3>Session Report</h3>
+            <span id="reportStatus">Not started</span>
+          </div>
+          <div id="reportList" class="report-list"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="src/app.js"></script>
+  </body>
+</html>

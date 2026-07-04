@@ -1,0 +1,18 @@
+{
+  "name": "ai-interview-coach",
+  "version": "1.0.0",
+  "description": "A resume-ready AI interview coaching web app for technical and HR mock interviews.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "ai",
+    "interview",
+    "career",
+    "resume",
+    "mock-interview"
+  ],
+  "author": "Prince Singh",
+  "license": "MIT"
+}
